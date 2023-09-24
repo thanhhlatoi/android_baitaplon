@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:id="@+id/CardView_sanpham"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="170dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="8dp">
+    <LinearLayout
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white">
+        <ImageButton
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:id="@+id/img_sanpham"
+            android:layout_marginLeft="20dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_image12" />
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:id="@+id/txt_ten"
+            android:text="Tinh chat Dear Klairs phuc hoi xa va duong am"
+            android:padding="6dp"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"/>
+        <TextView
+            android:id="@+id/txt_gia"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:text="300.000 "
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:textStyle="bold"/>
+        <LinearLayout
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/img_love"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/love"/>
+            <TextView
+                android:id="@+id/text_nx"
+                android:layout_marginLeft="10dp"
+                android:layout_width="110dp"
+                android:layout_height="30dp"
+                android:text="(10 Nhận xét)"
+                android:textStyle="bold"
+                android:textSize="15dp"/>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/txt_ban"
+            android:layout_width="150dp"
+            android:layout_height="20dp"
+            android:background="@drawable/img_rectangle126_pink_a100"
+            android:text="ĐÃ BÁN 100 SN PHẨM"
+            android:textSize="15dp"
+            android:textColor="@color/black"/>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
