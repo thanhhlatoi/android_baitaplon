@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".login_logout.QuenTK_MainActivity"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/img_group314_teal_800_74x426"
+        android:orientation="horizontal">
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/uaa6"
+            android:layout_marginTop="25dp"/>
+        <TextView
+            android:layout_marginLeft="70dp"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="25dp"
+            android:text="Lấy lại mật khẩu"
+            android:textSize="20dp"
+            android:textColor="@color/black"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="550dp"
+        android:orientation="vertical">
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:background="@drawable/button_trang"
+            android:hint="Nhập Họ Và Tên"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="50dp"/>
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:background="@drawable/button_trang"
+            android:hint="Nhập Họ Và Tên"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="30dp"/>
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:background="@drawable/button_trang"
+            android:hint="Nhập Họ Và Tên"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="30dp"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:background="@drawable/img_rectangle126_pink_a100"
+            android:text="Tiếp Tục"
+            android:textAllCaps="false"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="45dp"/>
+    </LinearLayout>
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:columnCount="5"
+        android:rowCount="1"
+        android:layout_gravity="center"
+        android:background="@drawable/img_group314_teal_800_74x426">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageButton
+                android:id="@+id/image_home_1"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/ua3"
+                android:contentDescription="Hình ảnh sua tam"
+                android:scaleType="centerInside" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Home"
+                android:textSize="10dp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageButton
+                android:id="@+id/image_feed_1"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/ua5"
+                android:contentDescription="Hình ảnh sua tam"
+                android:scaleType="centerInside" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Feed"
+                android:textSize="10dp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageButton
+                android:id="@+id/image_search_1"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/ua4"
+                android:contentDescription="Hình ảnh sua tam"
+                android:scaleType="centerInside" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Search"
+                android:textSize="10dp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageButton
+                android:id="@+id/image_giohang_1"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/ua1"
+                android:contentDescription="Hình ảnh sua tam"
+                android:scaleType="centerInside" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Giỏ Hàng"
+                android:textSize="10dp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageButton
+                android:id="@+id/image_tk_2"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/ua2"
+                android:contentDescription="Hình ảnh sua tam"
+                android:scaleType="centerInside" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tài Khoản"
+                android:textSize="10dp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+    </GridLayout>
+</LinearLayout>
