@@ -3,38 +3,74 @@ package com.example.baitaplon.Danh_Muc;
 import java.io.Serializable;
 
 public class SanPham implements Serializable {
-    private String tvName;
-    private int img;
-    private String tvName_gia;
+    private int Id;
+    private String Ten;
+    private String Gia;
+    private byte[]  hinh;
+    private String Mota;
+    private String Maloai;
 
-    public String getTvName() {
-        return tvName;
+    public int getId() {
+        return Id;
     }
 
-    public void setTvName(String tvName) {
-        this.tvName = tvName;
+    public void setId(int id) {
+        Id = id;
     }
 
-    public int getImg() {
-        return img;
+    public String getTen() {
+        return Ten;
     }
 
-    public void setImg(int img) {
-        this.img = img;
+    public void setTen(String ten) {
+        Ten = ten;
     }
 
-    public String getTvName_gia() {
-        return tvName_gia;
+    public String getGia() {
+        return Gia;
     }
 
-    public void setTvName_gia(String tvName_gia) {
-        this.tvName_gia = tvName_gia;
+    public void setGia(String gia) {
+        Gia = gia;
     }
 
-    public SanPham(String tvName, int img, String tvName_gia) {
-        this.tvName = tvName;
-        this.img = img;
-        this.tvName_gia = tvName_gia;
+    public byte[] getHinh() {
+        return hinh;
+    }
 
+    public void setHinh(byte[] hinh) {
+        this.hinh = hinh;
+    }
+
+    public String getMota() {
+        return Mota;
+    }
+
+    public void setMota(String mota) {
+        Mota = mota;
+    }
+
+    public String getMaloai() {
+        return Maloai;
+    }
+
+    public void setMaloai(String maloai) {
+        Maloai = maloai;
+    }
+
+    public SanPham(int id, String ten, String gia, byte[] hinh, String mota, String maloai) {
+        Id = id;
+        Ten = ten;
+        Gia = gia;
+        this.hinh = hinh;
+        Mota = mota;
+        Maloai = maloai;
+    }
+
+    public SanPham(int id, String ten, String gia, byte[] hinh) {
+        Id = id;
+        Ten = ten;
+        Gia = gia;
+        this.hinh = hinh;
     }
 }

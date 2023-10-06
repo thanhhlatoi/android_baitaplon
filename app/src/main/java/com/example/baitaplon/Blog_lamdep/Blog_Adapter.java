@@ -17,6 +17,7 @@ import java.util.List;
 public class Blog_Adapter extends RecyclerView.Adapter<Blog_Adapter.BlogView>{
     private List<Blog> mBlog;
 
+
     public void setData(List<Blog> list){
         this.mBlog = list;
         notifyDataSetChanged();

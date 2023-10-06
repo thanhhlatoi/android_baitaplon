@@ -22,6 +22,6 @@ public class MainActivity_BanHang extends AppCompatActivity {
         }
         SanPham sanPham = (SanPham) bundle.get("san_pham");
         TextView textView_1 = findViewById(R.id.txthihi);
-        textView_1.setText(sanPham.getTvName());
+
     }
 }

@@ -94,7 +94,7 @@
                     android:orientation="vertical"
                     android:gravity="center">
                     <ImageButton
-                        android:id="@+id/img_dmsp1"
+                        android:id="@+id/img_admin"
                         android:layout_width="match_parent"
                         android:layout_height="75dp"
                         android:scaleType="centerInside"
@@ -104,7 +104,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:text="Sua tam"
+                        android:text="ADMIN"
                         android:textColor="@color/black"
                         android:textSize="12dp"
                         android:textStyle="bold"

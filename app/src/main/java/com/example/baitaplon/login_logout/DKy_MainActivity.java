@@ -4,19 +4,24 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 
 import android.content.ContentValues;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.baitaplon.Modun.DatabaseHandler;
+import com.example.baitaplon.Danh_Muc.SanPham;
+import com.example.baitaplon.Modun.Database;
 import com.example.baitaplon.R;
 
+import java.util.ArrayList;
+
 public class DKy_MainActivity extends AppCompatActivity {
-    private EditText text_dky_username, text_dky_password, text_dky_SDT;
+    private EditText text_dky_pq,text_dky_username, text_dky_password, text_dky_SDT,text_dky_datetime,text_dky_name;
     private AppCompatButton bt_dky_dangnhap;
-    private DatabaseHandler dbHelper;
+    private  Database database;
+    ArrayList<TaiKhoan> listTaiKhoan;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,34 +30,60 @@ public class DKy_MainActivity extends AppCompatActivity {
         text_dky_username = findViewById(R.id.text_dky_username);
         text_dky_password = findViewById(R.id.text_dky_password);
         text_dky_SDT = findViewById(R.id.text_dky_SDT);
+        text_dky_datetime = findViewById(R.id.text_dky_datetime);
+        text_dky_pq = findViewById(R.id.text_dky_pq);
+        text_dky_name = findViewById(R.id.text_dky_name);
+
         bt_dky_dangnhap = findViewById(R.id.bt_dky_dangnhap);
-        dbHelper = new DatabaseHandler(this);
+        database = new Database(DKy_MainActivity.this, "Quanly.sqlite", null, 1);
+        database.QueryData("CREATE TABLE IF NOT EXISTS TaiKhoan (id INTEGER PRIMARY KEY AUTOINCREMENT, username VARCHAR(250), password VARCHAR(50), name VARCHAR(50), number VARCHAR(50), datetime VARCHAR(50), role INTEGER)");
+        // dang ky tk
         bt_dky_dangnhap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String username = text_dky_username.getText().toString();
-                String password = text_dky_password.getText().toString();
-                String SDT = text_dky_SDT.getText().toString();
+                // Lấy dữ liệu từ các trường nhập liệu
+                String username = text_dky_username.getText().toString().trim();
+                String password = text_dky_password.getText().toString().trim();
+                String name = text_dky_name.getText().toString().trim();
+                String number = text_dky_SDT.getText().toString().trim();
+                String datetime = text_dky_datetime.getText().toString().trim();
+                String pq = text_dky_pq.getText().toString().trim();
 
-                // Thêm thông tin người dùng vào cơ sở dữ liệu
-                if (username.length() > 0 && password.length() > 0) {
-                    addUserToDatabase(username, password, SDT);
-                    Toast.makeText(DKy_MainActivity.this, "Đăng ký thành công", Toast.LENGTH_SHORT).show();
-                    finish(); // Kết thúc màn hình đăng ký và quay lại màn hình đăng nhập
+                // Kiểm tra xem tất cả các trường nhập liệu có dữ liệu hợp lệ hay không
+                if (username.isEmpty() || password.isEmpty() || name.isEmpty() || number.isEmpty() || datetime.isEmpty() || pq.isEmpty()) {
+                    Toast.makeText(DKy_MainActivity.this, "Vui lòng điền đầy đủ thông tin!", Toast.LENGTH_SHORT).show();
                 } else {
-                    Toast.makeText(DKy_MainActivity.this, "Vui lòng điền đầy đủ thông tin", Toast.LENGTH_SHORT).show();
+                    // Thêm tài khoản vào cơ sở dữ liệu
+                    boolean result = database.INSERT_TAIKHOAN(username, password, name, number, datetime, pq);
+                    if (result) {
+                        // Thành công, hiển thị thông báo
+                       // updateTaiKhoan();
+                        Toast.makeText(DKy_MainActivity.this, "Thêm tài khoản thành công!", Toast.LENGTH_SHORT).show();
+                    } else {
+                        // Thất bại, hiển thị thông báo
+                        Toast.makeText(DKy_MainActivity.this, "Thêm tài khoản thất bại!", Toast.LENGTH_SHORT).show();
+                    }
                 }
-            }
-
-            private void addUserToDatabase(String username, String password, String sdt) {
-                SQLiteDatabase db = dbHelper.getWritableDatabase();
-                ContentValues values = new ContentValues();
-                values.put(DatabaseHandler.KEY_NAME, username);
-                values.put(DatabaseHandler.KEY_PASSWORD, password);
-                values.put(DatabaseHandler.KEY_PHONE_NUMBER, sdt);
-                db.insert(DatabaseHandler.TABLE_NAME, null, values);
-                db.close();
             }
         });
     }
+    private void updateTaiKhoan(){
+        listTaiKhoan.clear();
+        Cursor cursor = database.GetData("SELECT * FROM TaiKhoan");
+        if (cursor != null) {
+            while (cursor.moveToNext()) {
+                listTaiKhoan.add(new TaiKhoan(
+                        cursor.getInt(0),
+                        cursor.getString(1),
+                        cursor.getString(2),
+                        cursor.getString(3),
+                        cursor.getString(4),
+                        cursor.getString(5),
+                        cursor.getString(6)
+                ));
+            }
+            cursor.close();
+        }
+    }
 }
+

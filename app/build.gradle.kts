@@ -45,5 +45,6 @@ dependencies {
     implementation ("me.leolin:ShortcutBadger:1.1.22@aar")
     implementation ("com.nex3z:notification-badge:1.0.4")
     implementation("com.github.bumptech.glide:glide:4.12.0")
+    annotationProcessor ("com.github.bumptech.glide:compiler:4.12.0")
 
 }

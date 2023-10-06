@@ -10,11 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.baitaplon.Danh_Muc.SanPham;
-import com.example.baitaplon.Danh_Muc.SanPham_Adapter;
 import com.example.baitaplon.R;
-
-import org.w3c.dom.Text;
 
 import java.util.List;
 

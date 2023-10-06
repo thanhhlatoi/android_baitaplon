@@ -21,6 +21,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.baitaplon.AdminActivity;
 import com.example.baitaplon.Blog_lamdep.Bloglamdep_main;
 import com.example.baitaplon.Main_Account.Account_main;
 import com.example.baitaplon.R;
@@ -45,6 +46,7 @@ ArrayList<item_menu> arrayList;
 MenuAdapter adapter;
 ImageButton imageButton;
 ImageView imageView;
+ImageButton img_admin;
 
 
     @SuppressLint({"WrongViewCast", "MissingInflatedId"})
@@ -58,7 +60,16 @@ ImageView imageView;
         navigationView = findViewById(R.id.navigationView);
         listView = findViewById(R.id.listviewmanhinhchinh);
         drawerLayout = findViewById(R.id.drawer_layout);
-
+        //admin
+        img_admin = findViewById(R.id.img_admin);
+        img_admin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, AdminActivity.class);
+                startActivity(intent);
+            }
+        });
+        //thong bao
         imageView = findViewById(R.id.img_thongbao);
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override

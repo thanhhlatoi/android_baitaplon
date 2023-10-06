@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="90dp"
+        android:layout_marginRight="30dp"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/txt_danhmuc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="Sữa Rửa Mặt"
+            android:textSize="15dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textColorHint="@color/black"
+            android:background="@drawable/drawable_menu"/>
+        <TextView
+            android:id="@+id/txt_danhmuc1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kem Chống Nắng"
+            android:layout_margin="10dp"
+            android:textSize="15dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textColorHint="@color/black"/>
+        <TextView
+            android:id="@+id/txt_danhmuc2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Kem Dưỡng"
+            android:textSize="15dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textColorHint="@color/black"/>
+        <TextView
+            android:id="@+id/txt_danhmuc3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Son"
+            android:textSize="15dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textColorHint="@color/black"/>
+        <TextView
+            android:id="@+id/txt_danhmuc4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Srum"
+            android:textSize="15dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textColorHint="@color/black"/>
+        <TextView
+            android:id="@+id/txt_danhmuc5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Đắp Mặt Lạ"
+            android:textSize="15dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textColorHint="@color/black"/>
+        <TextView
+            android:id="@+id/txt_danhmuc6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Sữa Tắm"
+            android:textSize="15dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textColorHint="@color/black"/>
+    </LinearLayout>
+
+</LinearLayout>

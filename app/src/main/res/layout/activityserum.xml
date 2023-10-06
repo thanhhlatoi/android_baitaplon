@@ -88,10 +88,10 @@
                 <androidx.appcompat.widget.AppCompatButton
                     android:layout_width="10dp"
                     android:layout_height="match_parent"
-                    android:id="@+id/bt_danhmuc"
+                    android:id="@+id/bt_admin"
                     android:layout_margin="-2dp"
                     android:layout_weight="1"
-                    android:text="Danh Muc"
+                    android:text="ADMIN"
                     android:textSize="15dp"
                     android:textStyle="bold"
                     android:textColor="@android:color/black"
@@ -163,16 +163,6 @@
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/rcy_data"
-                    android:layout_gravity="center"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="50dp"
-                    android:layout_marginRight="50dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp">
-                </androidx.recyclerview.widget.RecyclerView>
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/rcy_sanpham"
                     android:layout_gravity="center"

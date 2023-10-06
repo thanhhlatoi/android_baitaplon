@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdminActivity"
+    android:orientation="vertical">
+    <EditText
+        android:id="@+id/txt_tensp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="nhap ten san pham"
+        android:layout_marginTop="5dp"/>
+    <EditText
+        android:id="@+id/txt_giasp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="nhap gia san pham"
+        android:layout_marginTop="5dp"/>
+    <EditText
+        android:id="@+id/txt_motasp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="nhap mo ta san pham"
+        android:layout_marginTop="5dp"/>
+    <EditText
+        android:id="@+id/txt_maloaisp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="nhap ma loai san pham"
+        android:layout_marginTop="5dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/ryc_admin"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="10dp">
+    </androidx.recyclerview.widget.RecyclerView>
+    <ImageView
+        android:id="@+id/img_sp"
+        android:layout_marginTop="10dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center" />
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal"
+       android:layout_marginTop="0dp">
+       <androidx.appcompat.widget.AppCompatButton
+           android:id="@+id/bt_chonanh"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="chon anh"
+           />
+       <androidx.appcompat.widget.AppCompatButton
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:id="@+id/bt_themsp"
+           android:text="them anh"
+           android:textAllCaps="false"
+           android:layout_marginLeft="10dp"/>
+       <androidx.appcompat.widget.AppCompatButton
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:id="@+id/bt_suasp"
+           android:text="sua anh"
+           android:textAllCaps="false"
+           android:layout_marginLeft="10dp"/>
+       <androidx.appcompat.widget.AppCompatButton
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:id="@+id/bt_xoasp"
+           android:text="xoa  anh"
+           android:textAllCaps="false"
+           android:layout_marginLeft="10dp"/>
+   </LinearLayout>
+</LinearLayout>

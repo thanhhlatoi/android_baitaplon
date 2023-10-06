@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Background color -->
+    <item android:drawable="@android:color/white" />
+
+    <!-- Border at the top -->
+    <item
+        android:left="0dp"
+        android:right="0dp"
+        android:top="0dp">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/white" /> <!-- Border color -->
+            <stroke
+                android:width="4dp"
+                android:color="#000000" /> <!-- Border width and color -->
+        </shape>
+    </item>
+
+    <!-- Border at the bottom -->
+    <item
+        android:left="0dp"
+        android:right="0dp"
+        android:bottom="0dp">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/white" /> <!-- Border color -->
+            <stroke
+                android:width="4dp"
+                android:color="#000000" /> <!-- Border width and color -->
+        </shape>
+    </item>
+</layer-list>
